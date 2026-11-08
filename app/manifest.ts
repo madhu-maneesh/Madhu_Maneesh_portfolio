@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Madhu Maneesh — Java Backend Engineer | Full Stack Developer | AI Engineer",
