@@ -121,7 +121,10 @@ export default function Contact() {
             Accept: "application/json",
           },
           body: JSON.stringify({
-            access_key: "13269548-23aa-49b8-89b0-d887eb9b8b60",
+            access_key:
+              process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ||
+              process.env.WEB3FORMS_ACCESS_KEY ||
+              "",
             name,
             email,
             subject: `[MM Portfolio] ${subject}`,
